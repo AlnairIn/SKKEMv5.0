@@ -1,32 +1,39 @@
 // Major clients and partners, as listed on saudikkem.com (Our Clients / Our Partners).
 // The live pages show logos only; names below come from the logo alt text and file names.
-// TODO (content owner): confirm names and spelling, and supply logo files (e.g. /public/clients/aramco.png)
-// if you want logos shown instead of name tiles; add `logo` to an entry to enable that.
+//
+// LOGOS: drop each logo file into public/clients/ (partners: public/partners/) named exactly as the `logo`
+// path below, plus an extension: .png, .jpg, .jpeg, .webp or .svg (e.g. public/clients/aramco.png).
+// A tile shows the logo when the file exists, and falls back to the organisation name when it does not.
 export interface Organisation {
   name: string;
+  /** Path under /public without the file extension. */
   logo?: string;
 }
 
-export const clients: Organisation[] = [
-  { name: "Aramco" },
-  { name: "SABIC" },
-  { name: "Maaden" },
-  { name: "Luberef" },
-  { name: "Sipchem" },
-  { name: "Satorp" },
-  { name: "Sadara" },
-  { name: "Yasref" },
-  { name: "Tasnee" },
-  { name: "S-CHEM" },
-  { name: "Natpet" },
-  { name: "Olayan" },
-  { name: "Marafiq" },
-  { name: "JEC" },
-  { name: "JANA" },
-  { name: "Gulf Farabi" },
-  { name: "Dialog" },
-  { name: "Chemanol" },
-  { name: "Sasref" },
-];
+const slug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const withLogos = (folder: string, names: string[]): Organisation[] =>
+  names.map((name) => ({ name, logo: `/${folder}/${slug(name)}` }));
 
-export const partners: Organisation[] = [{ name: "Keymag" }, { name: "Exen" }, { name: "PTP" }, { name: "Zain" }];
+export const clients: Organisation[] = withLogos("clients", [
+  "Aramco",
+  "SABIC",
+  "Maaden",
+  "Luberef",
+  "Sipchem",
+  "Satorp",
+  "Sadara",
+  "Yasref",
+  "Tasnee",
+  "S-CHEM",
+  "Natpet",
+  "Olayan",
+  "Marafiq",
+  "JEC",
+  "JANA",
+  "Gulf Farabi",
+  "Dialog",
+  "Chemanol",
+  "Sasref",
+]);
+
+export const partners: Organisation[] = withLogos("partners", ["Keymag", "Exen", "PTP", "Zain"]);
