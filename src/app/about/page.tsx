@@ -103,6 +103,7 @@ export default function AboutPage() {
               <h2 className="mt-4 text-xl font-semibold text-navy-800">Our vision</h2>
               <p className="mt-2 leading-relaxed text-slate-500">
                 To be a successful corporation built on loyalty, integrity, honesty, cohesiveness and professionalism.
+                
               </p>
             </div>
             <div className="card p-6 sm:p-8">

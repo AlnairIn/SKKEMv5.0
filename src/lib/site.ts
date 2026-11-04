@@ -26,7 +26,7 @@ export const stats = [
 export const navLinks = [
   { href: "/products", label: "Products" },
   { href: "/about", label: "About Us" },
-  { href: "/#track-record", label: "Track Record" },
+  // { href: "/#track-record", label: "Track Record" },
   { href: "/#safety", label: "Safety Commitment" },
   { href: "/careers", label: "Careers" },
 ] as const;

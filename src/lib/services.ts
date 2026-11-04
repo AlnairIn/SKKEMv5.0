@@ -58,7 +58,10 @@ export const services: Service[] = [
           "Ultrasonic Thickness Measurement (UTTM)",
           "Ultrasonic Flaw Detection (UTFD)",
           "Radiography Testing (RT)",
-          "Hardness testing",
+          "Hardness Testing",
+          "Holiday Testing",
+          "Positive Material Identification (PMI)",
+          "Visual Inspection",
         ],
       },
       {
@@ -66,12 +69,19 @@ export const services: Service[] = [
         description:
           "Specialised methods for inspecting plant and equipment without damaging it, covering ultrasonic scanning, tubing, thermography and material identification.",
         items: [
-          "Ultrasonic B-scan and C-scan depth and planar mapping",
-          "Tubing inspection: eddy current, remote field, magnetic flux leakage and ultrasonic",
+          "Ultrasonic B-scan and C-scan Depth and Planar Mapping",
+          "Tubing Inspection: Eddy Current, Remote Field, Magnetic Flux Leakage and Ultrasonic",
           "Eddy current weld testing",
-          "Infrared thermography for furnaces and boilers",
-          "Handheld XRF positive material identification",
-          "TOFD, phased array, guided wave, SCAR radiography, vacuum and holiday testing",
+          "Infrared Thermography for Furnaces and Boilers",
+          "Phased Array Ultrasonic Testing (PAUT)",
+          "Auto UT, Rapid Motion Scanning (RMS)",
+          "Short Range Ultrasonic (SRUT)",
+          "Guided Wave Testing ",
+          "Drone Inspection",
+          "Acoustic Emission Testing ",
+          "Vacuum Test",
+          "Replica Test",
+          "Acoustic Emission Test"
         ],
       },
       {
@@ -91,7 +101,7 @@ export const services: Service[] = [
         name: "NDT Training & Consultancy",
         description:
           "Efficient, cost-effective, high-quality solutions to clients' non-destructive testing problems.",
-        items: ["NDT Level II training and certification", "Welder qualification", "NDT procedures", "Radiography film interpreter"],
+        items: ["NDT Level II training and certification", "Welder qualification", "NDT procedures", "Radiography film interpreter", "Metllographic testing", "NDT consultancy and support"],
       },
     ],
     applications: [

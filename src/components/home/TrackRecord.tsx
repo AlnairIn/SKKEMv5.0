@@ -13,7 +13,7 @@ export default function TrackRecord() {
       <div className="container-x grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <p className="eyebrow !text-brand-400">Track record</p>
-          <h2 className="mt-2 text-3xl font-bold sm:text-4xl">13+ years serving process industry from Al Jubail</h2>
+          <h2 className="mt-2 text-3xl font-bold sm:text-4xl">17+ years serving process industry from Al Jubail</h2>
           <p className="mt-4 leading-relaxed text-slate-300">
             Our teams support critical assets across refining, petrochemicals and power, backed by a service portfolio
             of more than 67 technical and inspection services.
