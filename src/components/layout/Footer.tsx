@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin } from "lucide-react";
+import { Building2, MapPin } from "lucide-react";
 import { services } from "@/lib/services";
 import { navLinks, siteConfig } from "@/lib/site";
 
@@ -23,6 +23,10 @@ export default function Footer() {
             <span className="flex items-start gap-2">
               <MapPin size={16} className="mt-0.5 shrink-0 text-brand-400" aria-hidden />
               Headquarters: {siteConfig.address}
+            </span>
+            <span className="mt-1 flex items-start gap-2">
+              <Building2 size={16} className="mt-0.5 shrink-0 text-brand-400" aria-hidden />
+              Branch Office: {siteConfig.branchAddress}
             </span>
             <a href={`mailto:${siteConfig.email}`} className="mt-1 block hover:text-white">
               {siteConfig.email}

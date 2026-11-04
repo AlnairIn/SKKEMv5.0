@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Building2, Mail, MapPin, Phone } from "lucide-react";
+import SaudiMap from "@/components/contact/SaudiMap";
 import InquiryForm from "@/components/forms/InquiryForm";
 import { getPipingCategory } from "@/lib/piping-products";
 import { getProductCategory } from "@/lib/products";
@@ -36,12 +37,19 @@ export default async function ContactPage({
             Headquarters: {siteConfig.address}
           </li>
           <li className="flex gap-3">
+            <Building2 size={18} className="mt-0.5 shrink-0 text-brand-600" aria-hidden />
+            Branch Office: {siteConfig.branchAddress}
+          </li>
+          <li className="flex gap-3">
             <Mail size={18} className="mt-0.5 shrink-0 text-brand-600" aria-hidden />
             <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
           </li>
           <li className="flex gap-3">
             <Phone size={18} className="mt-0.5 shrink-0 text-brand-600" aria-hidden />
             <a href={siteConfig.phoneHref}>{siteConfig.phone}</a>
+          </li>
+          <li className="pt-2">
+            <SaudiMap />
           </li>
         </ul>
         <div id="quote" className="card scroll-mt-24 p-6 sm:p-8 lg:col-span-8">

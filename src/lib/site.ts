@@ -11,6 +11,7 @@ export const siteConfig = {
   phoneHref: "tel:+966133448522",
   phoneIntl: "+966 13 344 8522",
   address: "Al Jubail, Eastern Province, Saudi Arabia",
+  branchAddress: "Yanbu, Western Province, Saudi Arabia",
   locality: "Al Jubail",
   region: "Eastern Province",
   country: "SA",
