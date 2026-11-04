@@ -17,7 +17,7 @@ export const siteConfig = {
 };
 
 export const stats = [
-  { value: 13, suffix: "+", label: "Years of industrial excellence", format: "full" as const },
+  { value: 17, suffix: "+", label: "Years of industrial excellence", format: "full" as const },
   { value: 67, suffix: "+", label: "Technical & inspection services", format: "full" as const },
   { value: 4137857, suffix: "+", label: "Recorded safe man-hours", format: "full" as const },
 ];
