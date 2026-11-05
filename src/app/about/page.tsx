@@ -103,7 +103,6 @@ export default function AboutPage() {
               <h2 className="mt-4 text-xl font-semibold text-navy-800">Our vision</h2>
               <p className="mt-2 leading-relaxed text-slate-500">
                 To be a successful corporation built on loyalty, integrity, honesty, cohesiveness and professionalism.
-                
               </p>
             </div>
             <div className="card p-6 sm:p-8">
@@ -141,7 +140,7 @@ export default function AboutPage() {
 
         {/* HSE and quality */}
         <section className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-xl bg-navy-900 p-6 text-white sm:p-8">
+          <div className="flex flex-col rounded-xl bg-navy-900 p-6 text-white sm:p-8">
             <span className="grid h-11 w-11 place-items-center rounded-lg bg-brand-400/15 text-brand-400">
               <HardHat size={22} aria-hidden />
             </span>
@@ -151,8 +150,13 @@ export default function AboutPage() {
                 <li key={h}>{h}</li>
               ))}
             </ul>
+            <div className="mt-auto pt-8">
+              <Link href="/hse-policy" className="btn-outline">
+                Read our HSE Policy <ArrowRight size={16} aria-hidden />
+              </Link>
+            </div>
           </div>
-          <div className="card p-6 sm:p-8">
+          <div className="card flex flex-col p-6 sm:p-8">
             <span className="grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-brand-600">
               <Users size={22} aria-hidden />
             </span>
@@ -165,6 +169,11 @@ export default function AboutPage() {
                 </div>
               ))}
             </dl>
+            <div className="mt-auto pt-8">
+              <Link href="/quality-policy" className="btn-outline-dark">
+                Read our Quality Policy <ArrowRight size={16} aria-hidden />
+              </Link>
+            </div>
           </div>
         </section>
 
