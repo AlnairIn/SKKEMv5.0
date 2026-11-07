@@ -114,6 +114,11 @@ export default function Footer() {
                 Quality Policy
               </Link>
             </li>
+            <li>
+              <Link href="/contact?type=rfp#quote" className="hover:text-white">
+                Request RFP / Quote
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
