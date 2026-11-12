@@ -99,7 +99,7 @@ export default function Navbar() {
       >
         <div className="container-x flex h-[68px] items-center justify-between">
           <Link href="/" className="flex items-center gap-3" aria-label="Saudi K-KEM home">
-            <Image src="/logo.png" alt="" width={48} height={48} priority className="h-11 w-11 sm:h-12 sm:w-12" />
+            <Image src="/logo.png" alt="Saudi K-KEM" width={48} height={48} priority className="h-11 w-11 sm:h-12 sm:w-12" />
             <span className="leading-tight">
               <span className="block whitespace-nowrap font-display text-lg font-bold">
                 Saudi <span className="text-brand-400">K-KEM</span>

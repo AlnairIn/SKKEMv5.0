@@ -30,7 +30,7 @@ export default function Footer() {
       <div className="container-x grid gap-10 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-3">
-            <Image src="/logo.png" alt="" width={48} height={48} className="h-12 w-12" />
+            <Image src="/logo.png" alt="Saudi K-KEM" width={48} height={48} className="h-12 w-12" />
             <p className="font-display text-xl font-bold text-white">
               Saudi <span className="text-brand-400">K-KEM</span>
             </p>
