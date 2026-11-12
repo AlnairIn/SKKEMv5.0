@@ -1,10 +1,11 @@
-import { Factory, Flame, MapPin, Zap, Fuel } from "lucide-react";
+import { Factory, Flame, MapPin, Zap, Fuel, Pickaxe, Recycle, Sun } from "lucide-react";
 
 const sectors = [
   { icon: Fuel, title: "Refineries", text: "Turnaround inspection, RBI, asset integrity and rotating equipment reliability." },
   { icon: Factory, title: "Petrochemical plants", text: "Pressure equipment and piping inspection with condition monitoring." },
   { icon: Zap, title: "Power plants & transmission", text: "Vibration monitoring and aerial inspection of transmission assets." },
-  { icon: Flame, title: "Flare stacks & tall structures", text: "Rope access and drone-based visual inspection with reduced access requirements." },
+  { icon: Pickaxe, title: "Mining", text: "Inspection, NDT and condition monitoring of process equipment, piping and structures." },
+
 ];
 
 export default function TrackRecord() {
@@ -13,10 +14,9 @@ export default function TrackRecord() {
       <div className="container-x grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <p className="eyebrow !text-brand-400">Track record</p>
-          <h2 className="mt-2 text-3xl font-bold sm:text-4xl">17+ years serving process industry from Al Jubail</h2>
+          <h2 className="mt-2 text-3xl font-bold sm:text-4xl">17+ years serving the process industries.</h2>
           <p className="mt-4 leading-relaxed text-slate-300">
-            Our teams support critical assets across refining, petrochemicals and power, backed by a service portfolio
-            of more than 67 technical and inspection services.
+            Our teams support critical assets across refining, petrochemicals and power.
           </p>
           <div className="mt-8 flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-5">
             <MapPin className="mt-0.5 shrink-0 text-brand-400" size={22} aria-hidden />

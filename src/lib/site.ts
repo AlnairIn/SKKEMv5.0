@@ -7,11 +7,11 @@ export const siteConfig = {
   // TODO: replace with verified company details before launch
   email: "info@saudikkem.com",
   careersUrl: "https://k-kem.odoo.com/jobs", // Odoo ERP recruitment portal, embedded on /careers
-  phone: "013 344 8522",
+  phone: "+966 13 344 8522",
   phoneHref: "tel:+966133448522",
   phoneIntl: "+966 13 344 8522",
   address: "Al Jubail, Eastern Province, Saudi Arabia",
-  branchAddress: "Yanbu, Western Province, Saudi Arabia",
+  branchAddress: "Yanbu, Al Madinah Province, Saudi Arabia",
   locality: "Al Jubail",
   region: "Eastern Province",
   country: "SA",
@@ -20,7 +20,7 @@ export const siteConfig = {
 export const stats = [
   { value: 17, suffix: "+", label: "Years of industrial excellence", format: "full" as const },
   { value: 67, suffix: "+", label: "Technical & inspection services", format: "full" as const },
-  { value: 4137857, suffix: "+", label: "Recorded safe man-hours", format: "full" as const },
+  { value: 4137857, suffix: "+", label: "Recorded safe man-hours", format: "compact" as const },
 ];
 
 // "Services" is rendered as a dropdown from services.ts, so it is not listed here.

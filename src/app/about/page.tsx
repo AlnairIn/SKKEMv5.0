@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 // Company text below follows the About, Vision & Mission, HSE, Quality, Clients and Partners pages on saudikkem.com.
 // TODO (content owner): confirm wording; add leadership, locations and certifications when approved.
 const mission = [
-  "Stand out from competitors by offering new inspection techniques",
+  "Bring new and proven inspection techniques to our clients' plants",
   "Ensure client satisfaction through strong commitment and high quality across projects",
   "Maintain a competent, highly skilled workforce",
   "Promote Saudization",
@@ -43,12 +43,12 @@ export default function AboutPage() {
     <>
       <section className="bg-navy-900 py-16 text-white sm:py-20">
         <div className="container-x">
-          <p className="eyebrow !text-brand-400">About Saudi K-KEM</p>
+          <p className="eyebrow !text-brand-400">WE ARE DIFFERENT, HERE TO FULFIL YOUR BUSINESS NEEDS. </p>
           <h1 className="mt-3 max-w-3xl text-4xl font-bold sm:text-5xl">
             A reliable resource for NDT, inspection and asset integrity management
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-300">
-            We are different, here to fulfil your business needs. Headquartered in {siteConfig.address}, we help asset
+            Headquartered in {siteConfig.address}, we help asset
             owners inspect, understand and maintain critical plant equipment.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -102,7 +102,7 @@ export default function AboutPage() {
               </span>
               <h2 className="mt-4 text-xl font-semibold text-navy-800">Our vision</h2>
               <p className="mt-2 leading-relaxed text-slate-500">
-                To be a successful corporation built on loyalty, integrity, honesty, cohesiveness and professionalism.
+                To be the inspection and engineering partner asset owners trust first, built on integrity, professionalism and teamwork.
               </p>
             </div>
             <div className="card p-6 sm:p-8">

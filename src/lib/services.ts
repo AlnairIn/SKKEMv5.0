@@ -78,7 +78,6 @@ export const services: Service[] = [
           "Short Range Ultrasonic (SRUT)",
           "Guided Wave Testing ",
           "Drone Inspection",
-          "Acoustic Emission Testing ",
           "Vacuum Test",
           "Replica Test",
           "Acoustic Emission Test"
@@ -101,7 +100,7 @@ export const services: Service[] = [
         name: "NDT Training & Consultancy",
         description:
           "Efficient, cost-effective, high-quality solutions to clients' non-destructive testing problems.",
-        items: ["NDT Level II training and certification", "Welder qualification", "NDT procedures", "Radiography film interpreter", "Metllographic testing", "NDT consultancy and support"],
+        items: ["NDT Level II training and certification", "Welder qualification", "NDT procedures", "Radiography film interpreter", "Metallographic testing", "NDT consultancy and support"],
       },
     ],
     applications: [
@@ -113,7 +112,7 @@ export const services: Service[] = [
     ],
     industries: ["Refineries", "Petrochemical", "Power plants"],
     standards: ["API 510 / 570 / 653", "API 936", "CSWIP 3.1 / 3.2, PCN Level 2, AWS", "AMPP/NACE and ICORR (coatings)"],
-    rfpLabel: "Request Inspection RFP",
+    rfpLabel: "Request a Qoute",
   },
   {
     slug: "condition-monitoring",
@@ -252,9 +251,10 @@ export const services: Service[] = [
       },
     ],
     applications: [
-      "Plant and heavy equipment integrity programmes",
+      "Plant asset reliability optimization programs",
+      "Plant rehabilitation programs",
       "Corrosion loops and piping circuits",
-      "Pressure safety valves (PSV)",
+      "Pressure safety valves (PSV) integrity",
       "In-service components with damage or degradation",
       "Investigation of equipment and component failures",
     ],

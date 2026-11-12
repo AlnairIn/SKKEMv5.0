@@ -216,7 +216,7 @@ export default function Navbar() {
             ))}
 
             <Link href="/contact?type=rfp#quote" className="btn-primary ml-3 whitespace-nowrap !py-2">
-              Request RFP / Quote
+              Request a Quote
             </Link>
           </nav>
 

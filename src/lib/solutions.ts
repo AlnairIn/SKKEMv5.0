@@ -32,8 +32,8 @@ export interface SolutionPillar {
 export const solutionsIntro = {
   heading: "Inspection data turned into engineering decisions",
   paragraphs: [
-    "Driven by a commitment to reliability and engineering precision, Saudi K-KEM Solutions bridges the gap between complex inspection data and strategic decision-making. By integrating expertise across multidisciplinary engineering sectors, we deliver industry best practices tailored to client-specific operational needs. Whether supporting planned turnarounds, evaluating high-performance asset systems, or conducting comprehensive remaining life assessments, our service delivery is optimized to drive continuous operational excellence.",
-    "A partnership with Saudi K-KEM Solutions guarantees expert technical oversight, maximized asset lifespans, and rigorous inspection compliance across your facility.",
+    "Saudi K-KEM Solutions turns inspection data into clear engineering decisions. We bring NDT, integrity and reliability specialists together to support planned turnarounds, assess asset condition and estimate remaining life.",
+    "Working with us gives you experienced technical oversight, longer asset life and inspection programmes that meet code requirements.",
   ],
 };
 
@@ -41,9 +41,9 @@ export const solutionPillars: SolutionPillar[] = [
   {
     id: "asset-integrity",
     number: "01",
-    title: "One Stop Center for Asset Integrity Management",
+    title: "One-stop centre for asset integrity management",
     intro:
-      "With our expertise, we are capable providing a custom-made Asset integrity solution tailoring from different discipline such as NDT, Inspection, RBI, RCM, RCA, Static & Rotating equipment, Laboratory evaluation, Engineering solution & etc.",
+      "We build asset integrity programmes that combine NDT, inspection, RBI, RCM, RCA, static and rotating equipment expertise, laboratory evaluation and engineering.",
     listHeading: "Supported engineering services",
     items: [
       { name: "Asset Rehabilitation Analysis", icon: "rehab" },
@@ -60,7 +60,7 @@ export const solutionPillars: SolutionPillar[] = [
     title: "Smart Plant Solutions",
     subtitle: "Industry digitization & IoT",
     intro:
-      "In lieu of industry digitization & IoT development. We have an available technology that can be customized based on client needs to provide a Smart Plant Solution which supporting Autonomous & AI Plant operation which tailor with Plant availability.",
+      "As plants digitise, we supply online monitoring technology that can be tailored to each site and supports autonomous, AI-assisted operation.",
     listHeading: "Technology offerings",
     items: [
       { name: "Online UT and Guided Wave Monitoring Device", icon: "ut" },

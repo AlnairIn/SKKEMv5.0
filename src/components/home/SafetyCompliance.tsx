@@ -28,7 +28,7 @@ export default function SafetyCompliance() {
           </div>
           <div className="rounded-xl bg-navy-900 p-6 text-white lg:col-span-5">
             <p className="font-display text-5xl font-bold text-brand-400">
-              <StatsCounter value={hours.value} suffix={hours.suffix} mode="full" />
+              <StatsCounter value={hours.value} suffix={hours.suffix} mode="compact" />
             </p>
             <p className="mt-1 text-sm text-slate-300">Total recorded safe man-hours</p>
           </div>

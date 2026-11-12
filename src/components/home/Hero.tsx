@@ -24,21 +24,23 @@ export default function Hero() {
       <div className="container-x relative pt-16 sm:pt-20 lg:pt-24">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-7">
-            <p className="eyebrow !text-brand-400">Industrial Services &amp; Engineering Consultation</p>
+            <p className="eyebrow !text-brand-400">WE ARE DIFFERENT, HERE TO FULFIL YOUR BUSINESS NEEDS</p>
             <h1 className="mt-4 text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl">
-              Inspection and integrity services that keep Saudi industry safe and running.
+              Inspection, integrity and engineering services for critical industrial assets.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
-              We are different, here to fulfil your business needs. From our headquarters in Al Jubail, we deliver NDT
-              and inspection, vibration and condition monitoring, asset management consultancy, rope access and drone
-              inspection, engineering consultancy and safety services to refineries, petrochemical and power plants.
+             We combine experienced, certified specialists with advanced 
+             inspection technology to help asset owners operate safely, 
+             reliably and without unplanned downtime. Our services cover every stage of the asset lifecycle, 
+             from NDT and condition monitoring to asset integrity management and engineering consultancy, 
+             for refineries, petrochemical plants, power stations, fertilizer plants and drilling operations.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/services/ndt-inspection" className="btn-primary">
-                Explore Inspection Services <ArrowRight size={16} aria-hidden />
+                Explore our Services <ArrowRight size={16} aria-hidden />
               </Link>
               <Link href="/contact?type=proposal&service=engineering-consultancy#quote" className="btn-outline">
-                Request Engineering Proposal
+                Request a Quote
               </Link>
             </div>
           </div>

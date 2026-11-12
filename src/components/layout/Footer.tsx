@@ -116,7 +116,7 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/contact?type=rfp#quote" className="hover:text-white">
-                Request RFP / Quote
+                Request a Quote
               </Link>
             </li>
           </ul>

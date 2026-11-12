@@ -9,7 +9,7 @@ export default function ClientsStrip() {
       <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
         <div className="max-w-2xl">
           <p className="eyebrow">Our clients</p>
-          <h2 className="mt-2 text-3xl font-bold text-navy-800 sm:text-4xl">Trusted by the Kingdom&apos;s major operators</h2>
+          <h2 className="mt-2 text-3xl font-bold text-navy-800 sm:text-4xl">Trusted by leading energy and petrochemical operators</h2>
           <p className="mt-3 leading-relaxed text-slate-500">
             We support leading energy, petrochemical, mining and industrial companies across Saudi Arabia.
           </p>

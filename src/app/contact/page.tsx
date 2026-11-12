@@ -26,7 +26,7 @@ export default async function ContactPage({
   return (
     <div className="container-x py-16">
       <p className="eyebrow">Contact</p>
-      <h1 className="mt-2 text-4xl font-bold text-navy-800">Request an RFP, proposal or quote</h1>
+      <h1 className="mt-2 text-4xl font-bold text-navy-800">Send an RFP</h1>
       {selected && <p className="mt-3 text-slate-500">Service selected: {selected.name}</p>}
       {selectedProduct && <p className="mt-3 text-slate-500">Product category: {selectedProduct.title}</p>}
 
