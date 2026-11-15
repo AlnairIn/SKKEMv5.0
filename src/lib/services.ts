@@ -110,7 +110,7 @@ export const services: Service[] = [
       "Weld inspection during fabrication and repair",
       "Turnaround and shutdown campaigns",
     ],
-    industries: ["Refineries", "Petrochemical", "Power plants"],
+    industries: ["Refineries", "Petrochemical", "Power plants", "Mining", "Waste management"],
     standards: ["API 510 / 570 / 653", "API 936", "CSWIP 3.1 / 3.2, PCN Level 2, AWS", "AMPP/NACE and ICORR (coatings)"],
     rfpLabel: "Request a Qoute",
   },
@@ -258,7 +258,7 @@ export const services: Service[] = [
       "In-service components with damage or degradation",
       "Investigation of equipment and component failures",
     ],
-    industries: ["Petrochemical", "Oil & gas", "Power plants"],
+    industries: ["Petrochemical", "Oil & gas", "Power plants", "Renewable energy"],
     standards: [
       "API 580 / 581 (risk-based inspection)",
       "API 579-1 / ASME FFS-1 (fitness-for-service)",

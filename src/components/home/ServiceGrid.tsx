@@ -30,7 +30,7 @@ export default function ServiceGrid() {
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
             <p className="font-display text-5xl font-bold text-brand-400">{stats[1].value}+</p>
             <div>
-              <h3 className="text-xl font-semibold">Technical &amp; inspection services</h3>
+              <h3 className="text-xl font-semibold">Projects Delivered</h3>
               <p className="mt-1.5 max-w-xl text-sm leading-relaxed text-slate-300">
                 Don&apos;t see your requirement? Tell us the scope and we will confirm how we can support it.
               </p>
