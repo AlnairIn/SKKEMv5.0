@@ -42,6 +42,7 @@ export const solutionPillars: SolutionPillar[] = [
     id: "asset-integrity",
     number: "01",
     title: "One-stop centre for asset integrity management",
+    subtitle: "System integration engineering",
     intro:
       "We build asset integrity programmes that combine NDT, inspection, RBI, RCM, RCA, static and rotating equipment expertise, laboratory evaluation and engineering.",
     listHeading: "Supported engineering services",

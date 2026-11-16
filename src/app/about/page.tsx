@@ -199,9 +199,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="border-t border-slate-200 pt-8 text-sm text-slate-500">
-          {siteConfig.legalName} &middot; CR No. 2055012533
-        </section>
+       
       </div>
     </>
   );

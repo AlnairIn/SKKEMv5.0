@@ -88,12 +88,16 @@ export const services: Service[] = [
         description:
           "Independent inspection of industrial equipment to confirm it meets regulatory, voluntary or client-specific requirements.",
         items: [
-          "Pressure vessels to API 510",
-          "Piping to API 570 (metallic and FRP)",
-          "Storage tanks to API 653",
-          "Refractory to API 936",
-          "Welding inspection to CSWIP 3.1/3.2, PCN Level 2 and AWS",
-          "Painting and coating inspection (AMPP/NACE, ICORR) and static equipment inspection",
+          "Pressure Vessel Inspection (API 510)",
+          "Piping Inspection (API 570)",
+          "Tank Inspection (API 653)",
+          "Refractory Inspection (API 936)",
+          "Welding Inspection (CSWIP 3.1/3.2, PCN Level 2, AWS)",
+          "Painting & Coating Inspection (NACE & ICORR)",
+          "Pressure Relief Valve (PRV) Inspection",
+          "Boiler/Furnace Inspection",
+          "CUI Inspection",
+          "RCPC Pipeline Inspection",
         ],
       },
       {
@@ -116,7 +120,7 @@ export const services: Service[] = [
   },
   {
     slug: "condition-monitoring",
-    name: "Vibration & Condition Monitoring",
+    name: "Vibration and Condition Monitoring",
     shortName: "Condition Monitoring",
     icon: "activity",
     tagline: "Predictive maintenance for rotating equipment: vibration, thermography and UT scan.",

@@ -22,8 +22,7 @@ export default function SafetyCompliance() {
             <p className="eyebrow">Safety &amp; compliance</p>
             <h2 className="mt-2 text-3xl font-bold text-navy-800 sm:text-4xl">Safety is how we measure every job</h2>
             <p className="mt-4 max-w-2xl leading-relaxed text-slate-500">
-              Our people work in some of the most demanding plants in the Kingdom. Safe, compliant delivery is a
-              condition of the work, not an extra.
+              Our people work in some of the most demanding process plants in the industry.
             </p>
           </div>
           <div className="rounded-xl bg-navy-900 p-6 text-white lg:col-span-5">

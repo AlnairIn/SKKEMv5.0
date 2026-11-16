@@ -14,9 +14,9 @@ export default function CareersPage() {
       <section className="bg-navy-900 py-16 text-white sm:py-20">
         <div className="container-x">
           <p className="eyebrow !text-brand-400">Careers</p>
-          <h1 className="mt-3 max-w-3xl text-4xl font-bold sm:text-5xl">Join Our Team</h1>
+          <h1 className="mt-3 max-w-3xl text-4xl font-bold sm:text-5xl">Join our team</h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-300">
-            Explore current career opportunities at Saudi K-KEM Engineering Service Co.
+            Explore current career opportunities at Saudi K-KEM
           </p>
         </div>
       </section>

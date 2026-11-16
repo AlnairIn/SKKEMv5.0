@@ -4,7 +4,7 @@ const sectors = [
   { icon: Fuel, title: "Refineries", text: "Turnaround inspection, RBI, asset integrity and rotating equipment reliability." },
   { icon: Factory, title: "Petrochemical plants", text: "Pressure equipment and piping inspection with condition monitoring." },
   { icon: Zap, title: "Power plants & transmission", text: "Vibration monitoring and aerial inspection of transmission assets." },
-  { icon: Pickaxe, title: "Mining", text: "Inspection, NDT and condition monitoring of process equipment, piping and structures." },
+  { icon: Pickaxe, title: "Mining industries", text: "Inspection, NDT and condition monitoring of process equipment, piping and structures." },
 
 ];
 
