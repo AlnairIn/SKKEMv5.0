@@ -8,7 +8,7 @@ type Status = "idle" | "sending" | "sent" | "error";
 
 const types = [
   { value: "rfp", label: "Submit an RFP / tender" },
-  { value: "rfp", label: "Request for Demo" },
+  { value: "demo", label: "Request for Demo" },
   { value: "proposal", label: "Request an engineering proposal" },
   { value: "quote", label: "Request a quote" },
   { value: "technical", label: "Technical enquiry" },

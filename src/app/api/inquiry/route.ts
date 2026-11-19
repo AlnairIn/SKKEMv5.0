@@ -5,10 +5,73 @@ const esc = (s: string) =>
 
 const labels: Record<string, string> = {
   rfp: "RFP / tender",
+  demo: "Demo request",
   proposal: "Engineering proposal request",
   quote: "Quote request",
   technical: "Technical enquiry",
 };
+
+// ---- Email delivery -------------------------------------------------------------------------
+// Microsoft 365 (Microsoft Graph, recommended): MS_TENANT_ID, MS_CLIENT_ID, MS_CLIENT_SECRET
+// Resend (alternative):                          RESEND_API_KEY
+// Both:                                          INQUIRY_TO_EMAIL (inbox), INQUIRY_FROM_EMAIL (sender mailbox/address)
+// If the Microsoft 365 variables are set they are used; otherwise Resend is used.
+
+let cachedToken: { value: string; expires: number } | null = null;
+
+async function graphToken(tenant: string, id: string, secret: string): Promise<string> {
+  if (cachedToken && cachedToken.expires > Date.now() + 60_000) return cachedToken.value;
+  const res = await fetch(`https://login.microsoftonline.com/${encodeURIComponent(tenant)}/oauth2/v2.0/token`, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      client_id: id,
+      client_secret: secret,
+      scope: "https://graph.microsoft.com/.default",
+      grant_type: "client_credentials",
+    }),
+  });
+  if (!res.ok) throw new Error(`Microsoft token request failed: ${res.status} ${await res.text()}`);
+  const data = (await res.json()) as { access_token: string; expires_in: number };
+  cachedToken = { value: data.access_token, expires: Date.now() + data.expires_in * 1000 };
+  return data.access_token;
+}
+
+interface Mail {
+  from: string;
+  to: string;
+  replyTo: string;
+  replyToName: string;
+  subject: string;
+  html: string;
+}
+
+async function sendViaGraph(m: Mail, tenant: string, id: string, secret: string) {
+  const token = await graphToken(tenant, id, secret);
+  const res = await fetch(`https://graph.microsoft.com/v1.0/users/${encodeURIComponent(m.from)}/sendMail`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message: {
+        subject: m.subject,
+        body: { contentType: "HTML", content: m.html },
+        toRecipients: [{ emailAddress: { address: m.to } }],
+        replyTo: [{ emailAddress: { address: m.replyTo, name: m.replyToName } }],
+      },
+      saveToSentItems: false,
+    }),
+  });
+  if (!res.ok) throw new Error(`Microsoft Graph sendMail failed: ${res.status} ${await res.text()}`);
+}
+
+async function sendViaResend(m: Mail, apiKey: string) {
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ from: m.from, to: [m.to], reply_to: m.replyTo, subject: m.subject, html: m.html }),
+  });
+  if (!res.ok) throw new Error(`Resend failed: ${res.status} ${await res.text()}`);
+}
 
 export async function POST(req: Request) {
   let body: Record<string, unknown>;
@@ -33,11 +96,14 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Please complete all required fields with a valid email." }, { status: 400 });
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
+  const { MS_TENANT_ID, MS_CLIENT_ID, MS_CLIENT_SECRET, RESEND_API_KEY } = process.env;
   const to = process.env.INQUIRY_TO_EMAIL;
   const from = process.env.INQUIRY_FROM_EMAIL;
-  if (!apiKey || !to || !from) {
-    console.error("Inquiry email is not configured (RESEND_API_KEY / INQUIRY_TO_EMAIL / INQUIRY_FROM_EMAIL).");
+  const useGraph = Boolean(MS_TENANT_ID && MS_CLIENT_ID && MS_CLIENT_SECRET);
+  if (!to || !from || !(useGraph || RESEND_API_KEY)) {
+    console.error(
+      "Inquiry email is not configured: set INQUIRY_TO_EMAIL, INQUIRY_FROM_EMAIL and either MS_TENANT_ID / MS_CLIENT_ID / MS_CLIENT_SECRET or RESEND_API_KEY.",
+    );
     return NextResponse.json({ error: "Inquiry service is not configured yet. Please email us directly." }, { status: 503 });
   }
 
@@ -57,20 +123,20 @@ export async function POST(req: Request) {
     .map(([k, v]) => `<tr><td><b>${esc(k)}</b></td><td>${esc(v).replace(/\n/g, "<br>")}</td></tr>`)
     .join("")}</table>`;
 
-  const res = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
-    body: JSON.stringify({
-      from,
-      to: [to],
-      reply_to: email,
-      subject: `[Website] ${type} from ${company}`,
-      html,
-    }),
-  });
+  const mail: Mail = {
+    from,
+    to,
+    replyTo: email,
+    replyToName: name,
+    subject: `[Website] ${type} from ${company}`,
+    html,
+  };
 
-  if (!res.ok) {
-    console.error("Resend error", res.status, await res.text());
+  try {
+    if (useGraph) await sendViaGraph(mail, MS_TENANT_ID!, MS_CLIENT_ID!, MS_CLIENT_SECRET!);
+    else await sendViaResend(mail, RESEND_API_KEY!);
+  } catch (err) {
+    console.error("Inquiry email failed:", err);
     return NextResponse.json({ error: "Could not send your inquiry. Please try again." }, { status: 502 });
   }
   return NextResponse.json({ ok: true });
