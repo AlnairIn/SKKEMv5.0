@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { newsArticles } from "@/lib/news";
 import { productCategories } from "@/lib/products";
 import { services } from "@/lib/services";
 import { siteConfig } from "@/lib/site";
@@ -11,5 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
   const items = services.map((s) => ({ url: `${base}/services/${s.slug}`, lastModified: new Date() }));
   const products = productCategories.map((c) => ({ url: `${base}/products/${c.slug}`, lastModified: new Date() }));
-  return [...pages, ...items, ...products];
+  const news = newsArticles.map((a) => ({ url: `${base}/newsroom/${a.slug}`, lastModified: new Date(a.date) }));
+  return [...pages, ...items, ...products, ...news];
 }

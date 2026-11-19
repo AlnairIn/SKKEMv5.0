@@ -19,16 +19,14 @@ export const siteConfig = {
 
 export const stats = [
   { value: 17, suffix: "+", label: "Years of industrial excellence", format: "full" as const },
-  { value: 5000, suffix: "+", label: "Projects Delivered", format: "compact" as const },
- // { value: 67, suffix: "+", label: "Technical & inspection services", format: "full" as const },
+  { value: 800, suffix: "+", label: "Projects Delivered", format: "full" as const },
   { value: 4137857, suffix: "+", label: "Recorded safe man-hours", format: "compact" as const },
 ];
 
 // "Services" is rendered as a dropdown from services.ts, so it is not listed here.
 export const navLinks = [
   { href: "/products", label: "Products" },
-  { href: "/about", label: "About Us" },
-  // { href: "/#track-record", label: "Track Record" },
-  { href: "/#safety", label: "Safety Commitment" },
+  { href: "/about", label: "About us" },
   { href: "/careers", label: "Careers" },
+  { href: "/newsroom", label: "Newsroom" },
 ] as const;

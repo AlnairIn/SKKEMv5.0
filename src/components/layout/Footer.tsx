@@ -96,7 +96,6 @@ export default function Footer() {
               </Link>
             </li>
             {navLinks
-              .filter((l) => l.label !== "Safety Commitment")
               .map((l) => (
               <li key={l.href}>
                 <Link href={l.href} className="hover:text-white">

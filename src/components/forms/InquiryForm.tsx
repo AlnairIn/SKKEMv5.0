@@ -8,6 +8,7 @@ type Status = "idle" | "sending" | "sent" | "error";
 
 const types = [
   { value: "rfp", label: "Submit an RFP / tender" },
+  { value: "rfp", label: "Request for Demo" },
   { value: "proposal", label: "Request an engineering proposal" },
   { value: "quote", label: "Request a quote" },
   { value: "technical", label: "Technical enquiry" },
@@ -66,15 +67,15 @@ export default function InquiryForm({
       <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
 
       <label className="text-sm font-medium text-slate-700">
-        Full name
+        Full name*
         <input name="name" required className="input mt-1" autoComplete="name" />
       </label>
       <label className="text-sm font-medium text-slate-700">
-        Company
+        Company*
         <input name="company" required className="input mt-1" autoComplete="organization" />
       </label>
       <label className="text-sm font-medium text-slate-700">
-        Work email
+        Work email*
         <input name="email" type="email" required className="input mt-1" autoComplete="email" />
       </label>
       <label className="text-sm font-medium text-slate-700">

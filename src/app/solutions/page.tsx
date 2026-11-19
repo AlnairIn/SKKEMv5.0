@@ -60,7 +60,7 @@ export default function SolutionsPage() {
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href={solutionsQuoteHref} className="btn-primary">
-              Request Quote <ArrowRight size={16} aria-hidden />
+              Request for Demo <ArrowRight size={16} aria-hidden />
             </Link>
             <a href="#asset-integrity" className="btn-outline">
               Explore our solutions
@@ -143,7 +143,7 @@ export default function SolutionsPage() {
               </p>
             </div>
             <Link href={solutionsQuoteHref} className="btn-primary shrink-0 !px-7 !py-3.5 text-base">
-              Request Quote <ArrowRight size={18} aria-hidden />
+              Request for Demo <ArrowRight size={18} aria-hidden />
             </Link>
           </div>
         </div>

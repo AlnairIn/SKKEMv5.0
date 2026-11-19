@@ -36,4 +36,4 @@ export const clients: Organisation[] = withLogos("clients", [
   "Sasref",
 ]);
 
-export const partners: Organisation[] = withLogos("partners", ["Keymag", "Exen", "PTP", "Zain"]);
+export const partners: Organisation[] = withLogos("partners", ["Keymag", "Exen", "PTP", "Tribosonics"]);
