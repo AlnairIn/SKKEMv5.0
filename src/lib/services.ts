@@ -25,8 +25,7 @@ export interface Service {
   applications: string[];
   industries: string[];
   standards: string[];
-  /**rfpLabel: string; */
-  /** Optional detailed breakdown; when present the service page shows it instead of the flat "includes" pills. */
+  rfpLabel?: string;
   subServices?: SubService[];
 }
 
@@ -116,7 +115,7 @@ export const services: Service[] = [
     ],
     industries: ["Refineries", "Petrochemical", "Power plants", "Mining", "Waste management"],
     standards: ["API 510 / 570 / 653", "API 936", "CSWIP 3.1 / 3.2, PCN Level 2, AWS", "AMPP/NACE and ICORR (coatings)"],
-    /**rfpLabel: "Request a Qoute", */
+    rfpLabel: "Request a Qoute",
   },
   {
     slug: "condition-monitoring",
@@ -175,7 +174,7 @@ export const services: Service[] = [
     applications: ["Pumps and compressors", "Steam and gas turbines", "Electric motors and drives", "Fans, blowers and gearboxes", "Drilling rigs"],
     industries: ["Refineries", "Petrochemical", "Power plants", "Fertilizer plants"],
     standards: ["ISO 20816 (vibration evaluation)", "ISO 13373 (condition monitoring)", "ISO 18436 (analyst qualification)"],
-    /**rfpLabel: "Request Monitoring Proposal", */
+    rfpLabel: "Request Monitoring Proposal",
   },
   // Source: the "Asset Management Consultancy" category on saudikkem.com (RBI Services, Asset Integrity
   // Services, Fitness for Service, Failure Analysis). Those pages name no codes, so the standards below
@@ -268,7 +267,7 @@ export const services: Service[] = [
       "API 579-1 / ASME FFS-1 (fitness-for-service)",
       "API 510 / 570 / 653 (in-service inspection)",
     ],
-    /**rfpLabel: "Request Asset Management Proposal", */
+    rfpLabel: "Request Asset Management Proposal",
   },
   {
     slug: "rope-access-drone-inspection",
@@ -316,7 +315,7 @@ export const services: Service[] = [
     applications: ["Flare stacks and flare tips", "Power transmission lines and towers", "Towers, columns and pipe racks", "Rigs, platforms and ship terminals", "Tanks, vessels and furnaces (confined space)"],
     industries: ["Refineries", "Petrochemical", "Power and utilities", "Oil & gas"],
     standards: ["IRATA International (rope access)", "GACA unmanned aircraft regulations", "Client site access and permit-to-work rules"],
-    /**rfpLabel: "Request Rope Access / Drone Quote", */
+    rfpLabel: "Request Rope Access / Drone Quote",
   },
   {
     slug: "engineering-consultancy",
@@ -388,7 +387,7 @@ export const services: Service[] = [
     ],
     industries: ["Oil & gas", "Petrochemical", "Power generation"],
     standards: ["API 579-1 / ASME FFS-1", "ASME B31.3", "ASME Section VIII"],
-    /**rfpLabel: "Request Engineering Proposal", */
+    rfpLabel: "Request Engineering Proposal",
   },
   {
     slug: "safety-services",
@@ -440,7 +439,7 @@ export const services: Service[] = [
     applications: ["Tank, column, furnace and vessel entry", "Turnaround and shutdown manpower control", "High-volume contractor mobilisation", "Contractor record keeping and client reporting"],
     industries: ["Refineries", "Petrochemical", "Power plants", "Oil & gas"],
     standards: ["Client HSSE policies and permit-to-work rules"],
-    /**rfpLabel: "Request Safety Services Quote", */
+    rfpLabel: "Request Safety Services Quote",
   },
 ];
 

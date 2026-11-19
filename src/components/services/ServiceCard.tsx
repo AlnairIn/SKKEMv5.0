@@ -3,7 +3,8 @@ import { ArrowRight, Check } from "lucide-react";
 import ServiceIcon from "./ServiceIcon";
 import { rfpHref, type Service } from "@/lib/services";
 
-export default function ServiceCard({ service }: { service: Service }) {
+/** showRfp=false hides the "Request ..." link (used on the homepage). */
+export default function ServiceCard({ service, showRfp = true }: { service: Service; showRfp?: boolean }) {
   return (
     <article className="card group relative flex h-full flex-col p-6 transition-shadow hover:shadow-lg">
       <span className="grid h-12 w-12 place-items-center rounded-lg bg-navy-800 text-brand-400">
@@ -29,9 +30,11 @@ export default function ServiceCard({ service }: { service: Service }) {
         <Link href={`/services/${service.slug}`} className="inline-flex items-center gap-1 text-navy-800 hover:text-brand-600">
           Learn more <ArrowRight size={14} aria-hidden />
         </Link>
-        <Link href={rfpHref(service.slug)} className="text-brand-600 hover:text-brand-700">
-          {service.rfpLabel}
-        </Link>
+        {showRfp && service.rfpLabel && (
+          <Link href={rfpHref(service.slug)} className="text-brand-600 hover:text-brand-700">
+            {service.rfpLabel}
+          </Link>
+        )}
       </div>
     </article>
   );

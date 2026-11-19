@@ -58,9 +58,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <h1 className="max-w-3xl text-3xl font-bold sm:text-5xl">{service.name}</h1>
               <p className="mt-4 max-w-2xl text-lg leading-relaxed text-slate-300">{service.tagline}</p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link href={rfpHref(service.slug)} className="btn-primary">
-                  {service.rfpLabel} <ArrowRight size={16} aria-hidden />
-                </Link>
+                {service.rfpLabel && (
+                  <Link href={rfpHref(service.slug)} className="btn-primary">
+                    {service.rfpLabel} <ArrowRight size={16} aria-hidden />
+                  </Link>
+                )}
                 <Link href="/services" className="btn-outline">
                   All services
                 </Link>
@@ -156,13 +158,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               ))}
             </ul>
           </div>
-          <div className="rounded-xl bg-navy-900 p-6 text-white">
-            <h2 className="text-lg font-semibold">Ready to discuss your scope?</h2>
-            <p className="mt-2 text-sm text-slate-300">Send us your RFP or requirements and we will respond with a proposal.</p>
-            <Link href={rfpHref(service.slug)} className="btn-primary mt-5 w-full">
-              {service.rfpLabel}
-            </Link>
-          </div>
+          {service.rfpLabel && (
+            <div className="rounded-xl bg-navy-900 p-6 text-white">
+              <h2 className="text-lg font-semibold">Ready to discuss your scope?</h2>
+              <p className="mt-2 text-sm text-slate-300">Send us your RFP or requirements and we will respond with a proposal.</p>
+              <Link href={rfpHref(service.slug)} className="btn-primary mt-5 w-full">
+                {service.rfpLabel}
+              </Link>
+            </div>
+          )}
         </aside>
       </div>
 
