@@ -6,6 +6,8 @@ import { clients, partners } from "@/lib/clients";
 import { services } from "@/lib/services";
 import { siteConfig, stats } from "@/lib/site";
 
+const compact = new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 1 });
+
 export const metadata: Metadata = {
   title: "About Us",
   description:
@@ -85,7 +87,7 @@ export default function AboutPage() {
               <div key={s.label} className="card flex flex-col-reverse justify-end p-5">
                 <dt className="mt-1 text-sm text-slate-500">{s.label}</dt>
                 <dd className="font-display text-3xl font-bold text-navy-800">
-                  {s.value.toLocaleString("en-US")}
+                  {compact.format(s.value)}
                   {s.suffix}
                 </dd>
               </div>
